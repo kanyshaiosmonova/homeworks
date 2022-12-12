@@ -2,7 +2,7 @@ void main() {
 //1.Дан массив с числами [1, 7, 12, 3, 56, 2, 87, 34, 54]. Выведите в консоли первый, пятый и последний элемент списка.
 
   List<int> listOne = [1, 7, 12, 3, 56, 2, 87, 34, 54];
-  print('${listOne.first}')
+  print('${listOne.first}', '${listOne[4]}','${listOne.last}');
   
 
 //2.Даны два массива с числами [3, 12, 43, 1, 25, 6, 5, 7] и [55, 11, 23, 56, 78, 1, 9]. Объедените данные массивы и выведите в консоли,
@@ -45,6 +45,9 @@ void main() {
 1 – true
 2 – false
 */
+List find = [601, 123, 2, "dart", 45, 95, "dart24", 1];
+print(find.contains('dart'));
+print(find.contains(951));
 
 
 
@@ -52,7 +55,9 @@ void main() {
 И переменная String myDart = ‘Flutter’;
 Попробуйте определить содержит ли список значение переменной myDart (Именно с большой буквы).
 Вы должны получить print со значением true;*/
-
+List d = [‘post’, 1, 0, ‘flutter’];
+String text1 = 'Flutter';
+print(d.contains(text1.toLowerCase()));
 
 /*7) У вас есть список со значениями [“I”, “Started", "Learn", "Flutter", "Since", "April"];
 И переменная String myFlutter = ‘’;
@@ -60,7 +65,10 @@ void main() {
 Print(myFlutter);
 В консоли вы должны получить:
 I * Started * Learn * Flutter * Since * April*/
-
+List myFlutterList = [“I”, “Started", "Learn", "Flutter", "Since", "April"];
+String myFlutter;
+myFlutter = myFlutterList.join(*);
+print(myFlutter);
 
 /*8) У вас есть массив со значением = [1, 9, 3, 195, 202, 2, 5, 7, 9, 10, 3, 15, 0, 11];
 Ваша задача провести сортировку массива, чтобы все элементы начинались по возрастающей. Вы должны получить в консоли:
