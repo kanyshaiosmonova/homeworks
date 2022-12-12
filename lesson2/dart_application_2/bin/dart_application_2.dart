@@ -2,8 +2,7 @@ void main() {
 //1.Дан массив с числами [1, 7, 12, 3, 56, 2, 87, 34, 54]. Выведите в консоли первый, пятый и последний элемент списка.
 
   List<int> listOne = [1, 7, 12, 3, 56, 2, 87, 34, 54];
-  print('${listOne.first}', '${listOne[4]}','${listOne.last}');
-  
+  print('${listOne.first}', '${listOne[4]}', '${listOne.last}');
 
 //2.Даны два массива с числами [3, 12, 43, 1, 25, 6, 5, 7] и [55, 11, 23, 56, 78, 1, 9]. Объедените данные массивы и выведите в консоли,
 
@@ -29,13 +28,11 @@ void main() {
     'h',
     'j'
   ];
-  print(text.getRange(2,9).toList());
+  print(text.getRange(2, 9).toList());
 
 /*4.Выведите true если массивы слодержит цифру 3 [1, 2, 3, 4, 5, 6, 7], также покажите первый и последний элемент массива и его длину*/
   List findThree = [1, 2, 3, 4, 5, 6, 7];
   print(findThree.contains(3));
-
-
 
 /*5) У вас есть список со значениями = [601 123, 2, "dart", 45, 95, "dart24", 1];
 Попробуйте определить содержит ли список такие элементы как:
@@ -45,19 +42,17 @@ void main() {
 1 – true
 2 – false
 */
-List find = [601, 123, 2, "dart", 45, 95, "dart24", 1];
-print(find.contains('dart'));
-print(find.contains(951));
-
-
+  List find = [601, 123, 2, "dart", 45, 95, "dart24", 1];
+  print(find.contains('dart'));
+  print(find.contains(951));
 
 /*6) У вас есть список со значениями = [‘post’, 1, 0, ‘flutter’];
 И переменная String myDart = ‘Flutter’;
 Попробуйте определить содержит ли список значение переменной myDart (Именно с большой буквы).
 Вы должны получить print со значением true;*/
-List d = [‘post’, 1, 0, ‘flutter’];
-String text1 = 'Flutter';
-print(d.contains(text1.toLowerCase()));
+  List d6 = ['post', 1, 0, 'flutter'];
+  String text1 = 'Flutter';
+  print(d6.contains(text1.toLowerCase()));
 
 /*7) У вас есть список со значениями [“I”, “Started", "Learn", "Flutter", "Since", "April"];
 И переменная String myFlutter = ‘’;
@@ -65,13 +60,16 @@ print(d.contains(text1.toLowerCase()));
 Print(myFlutter);
 В консоли вы должны получить:
 I * Started * Learn * Flutter * Since * April*/
-List myFlutterList = [“I”, “Started", "Learn", "Flutter", "Since", "April"];
-String myFlutter;
-myFlutter = myFlutterList.join(*);
-print(myFlutter);
+  List myFlutterList = ['I', 'Started', 'Learn', 'Flutter', 'Since', 'April'];
+  List myFlutter = [myFlutterList.join(' * ')];
+  String myFlutter2 = " ";
+  print(myFlutter2);
 
 /*8) У вас есть массив со значением = [1, 9, 3, 195, 202, 2, 5, 7, 9, 10, 3, 15, 0, 11];
 Ваша задача провести сортировку массива, чтобы все элементы начинались по возрастающей. Вы должны получить в консоли:
 [0, 1, 2, 3, 3, 5, 7, 9, 9, 10, 11, 15, 195, 202]*/
 
+  List myArray = [1, 9, 3, 195, 202, 2, 5, 7, 9, 10, 3, 15, 0, 11];
+  myArray.sort();
+  print(myArray);
 }
