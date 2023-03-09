@@ -174,3 +174,49 @@ void main() {
 // который пишет через консоль, что студент учится. Класс «Учитель» будет иметь метод «Объяснение»,
 // который записывает в консоль, что учитель объясняет.
 // Завершите программу выводом в консоль параметров людей (учителя и учеников) и выполните методы «Объяснить» и «Изучить».
+import 'dart:io';
+
+class Person {
+  String name;
+
+  Person(this.name);
+}
+
+class Student extends Person {
+  Student(String name) : super(name);
+
+  void study() {
+    print('$name учится');
+  }
+}
+
+class Teacher extends Person {
+  Teacher(String name) : super(name);
+
+  void explain() {
+    print('$name объясняет');
+  }
+}
+
+void main() {
+  var people = [];
+
+  for (var i = 0; i < 3; i++) {
+    print('Введите имя человека:');
+    var name = stdin.readLineSync();
+    if (i < 2) {
+      people.add(Student(name));
+    } else {
+      people.add(Teacher(name));
+    }
+  }
+
+  for (var person in people) {
+    print('Имя: ${person.name}');
+    if (person is Student) {
+      person.study();
+    } else if (person is Teacher) {
+      person.explain();
+    }
+  }
+}
